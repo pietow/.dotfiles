@@ -79,7 +79,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     docker
-    vi-mode
+    zsh-vi-mode
     copydir
     dirhistory
     kubectl
