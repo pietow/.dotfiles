@@ -122,6 +122,9 @@ alias l='ls -CF'
 alias mak='/home/user/Desktop/UI5/generate/gen/bin/mak'
 alias nv='/home/user/neoVim_versions/./nvim.appimage_nightly*'
 alias nvim='/home/user/neoVim_versions/./nvim.appimage_stable*'
+alias tmux-session='/home/user/frontEndMasters/productivity/./tmux-sessionizer'
+alias cht='/home/user/frontEndMasters/productivity/./cht'
+alias gitIni='/home/user/frontEndMasters/productivity/startProject'
 mkcdir ()
 {
     mkdir -p -- "$1" &&
