@@ -2,17 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/user/.oh-my-zsh"
+export ZSH="/home/piet/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="amuse"
-
-# Enable vi mode
-bindkey -v
-# ZSH_THEME="random" # (...please let it be pie... please be some pie..)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -49,8 +45,6 @@ bindkey -v
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
-# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -76,21 +70,30 @@ bindkey -v
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    zsh-syntax-highlighting
-    zsh-autosuggestions
-    docker
-    zsh-vi-mode
-    copydir
-    dirhistory
-    kubectl
+    # zsh-syntax-highlighting
+    # zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
+alias nvim='/home/piet/nvimExecutable/nvim.appimage'
+alias tmux-session='/home/piet/personal/productivity/./tmux-sessionizer'
+# alias runSubs='/home/piet/personal/productivity/./runSubmodules'
+# runSubs () {
+#     session_name=$(pwd)
+#     echo "${session_name##*/}"
+# }
+# export runSubs
+# export -f '/home/piet/personal/productivity/./runSubmodules'
+# alias cht='/home/user/frontEndMasters/productivity/./cht'
+alias gitIni='/home/piet/personal/productivity/startProject'
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
 
 # User configuration
 
-export VIMCONFIG=~/.config/nvim
-export VIMDATA=~/.local/share/nvim
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -114,30 +117,9 @@ export VIMDATA=~/.local/share/nvim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias mak='/home/user/Desktop/UI5/generate/gen/bin/mak'
-alias nv='/home/user/neoVim_versions/./nvim.appimage_nightly*'
-alias nvim='/home/user/neoVim_versions/./nvim.appimage_stable*'
-alias tmux-session='/home/user/frontEndMasters/productivity/./tmux-sessionizer'
-alias cht='/home/user/frontEndMasters/productivity/./cht'
-alias gitIni='/home/user/frontEndMasters/productivity/startProject'
-mkcdir ()
-{
-    mkdir -p -- "$1" &&
-      cd -P -- "$1"
-}
-
-
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/go/bin
-
-#####################################################
+alias sail='bash vendor/bin/sail'
+#make BREW available
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+path+=/home/piet/.config/composer/vendor/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-
