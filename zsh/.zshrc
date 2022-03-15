@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/piet/.oh-my-zsh"
+export ZSH="/home/dci-student/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -75,8 +75,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-alias nvim='/home/piet/nvimExecutable/nvim.appimage'
-alias tmux-session='/home/piet/personal/productivity/./tmux-sessionizer'
+alias sudo="sudo "
+alias nvim='/home/$USER/personal/productivity/ansible/nvim.appimage'
+alias tmux-session='/home/$USER/personal/productivity/./tmux-sessionizer'
 # alias runSubs='/home/piet/personal/productivity/./runSubmodules'
 # runSubs () {
 #     session_name=$(pwd)
@@ -92,6 +93,7 @@ mkcdir ()
       cd -P -- "$1"
 }
 
+alias ll="ls -al"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -119,7 +121,7 @@ mkcdir ()
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sail='bash vendor/bin/sail'
 #make BREW available
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-path+=/home/piet/.config/composer/vendor/bin
+# eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# path+=/home/piet/.config/composer/vendor/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
