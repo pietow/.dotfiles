@@ -77,7 +77,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 alias sudo="sudo "
 alias nvim='/home/$USER/personal/productivity/ansible/nvim.appimage'
-alias tmux-session='/home/$USER/personal/productivity/./tmux-sessionizer'
+alias txs='/home/$USER/personal/productivity/./tmux-sessionizer'
+alias v='nvim --cmd "set rtp+=./"'
 # alias runSubs='/home/piet/personal/productivity/./runSubmodules'
 # runSubs () {
 #     session_name=$(pwd)
