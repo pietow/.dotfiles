@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/dci-student/.oh-my-zsh"
+# export ZSH="/home/dci-student/.oh-my-zsh"
 export ZSH="${HOME}/.oh-my-zsh"
 # export TMUX_TMPDIR="${HOME}/.tmux/tmp"
 
@@ -78,7 +78,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 alias sudo="sudo "
-alias nvim='~/personal/productivity/ansible/nvim.appimage'
+alias nvim='~/personal/productivity/ansible/nvim.appimage --appimage-extract-and-run'
 alias txs='~/personal/productivity/./tmux-sessionizer'
 alias txNew='~/personal/productivity/./updatePaths.sh'
 alias txk='tmux kill-session'
@@ -92,7 +92,7 @@ alias startRedis="redis-commander --redis-port 14343 --redis-host 'redis-14343.c
 # export runSubs
 # export -f '/home/piet/personal/productivity/./runSubmodules'
 # alias cht='/home/user/frontEndMasters/productivity/./cht'
-alias gitIni='/home/piet/personal/productivity/startProject'
+alias gitIni='~/personal/productivity/startProject'
 mkcdir ()
 {
     mkdir -p -- "$1" &&
