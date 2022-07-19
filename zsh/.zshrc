@@ -11,10 +11,14 @@ export ZSH="${HOME}/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="amuse"
-if $IS_DOCKER; then
-  ZSH_THEME="simple"
+#check if environmental variable exists
+if [[ -z "${IS_DOCKER}" ]]; then
+  ZSH_THEME="amuse"
+  alias nvim='~/personal/productivity/ansible/nvim.appimage'
 else
-    ZSH_THEME="amuse"
+    ZSH_THEME="simple"
+    alias nvim='~/personal/productivity/ansible/nvim.appimage --appimage-extract-and-run'
+    alias tmux='tmux -u'
 fi
 
 # Set list of themes to pick from when loading at random
@@ -83,7 +87,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 alias sudo="sudo "
-alias nvim='~/personal/productivity/ansible/nvim.appimage --appimage-extract-and-run'
 alias txs='~/personal/productivity/./tmux-sessionizer'
 alias txNew='~/personal/productivity/./updatePaths.sh'
 alias txk='tmux kill-session'
