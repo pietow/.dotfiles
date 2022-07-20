@@ -90,8 +90,10 @@ alias sudo="sudo "
 alias txs='~/personal/productivity/./tmux-sessionizer'
 alias txNew='~/personal/productivity/./updatePaths.sh'
 alias txk='tmux kill-session'
+alias localGitState="~/personal/productivity/./traverseGit.sh > ~/personal/productivity/gitState.txt"
 alias v='nvim --cmd "set rtp+=./"'
 alias startRedis="redis-commander --redis-port 14343 --redis-host 'redis-14343.c55.eu-central-1-1.ec2.cloud.redislabs.com' --redis-password '9wkQO8cp9nqR9A0wBFiueQD7oHGmRM3e' --open"
+
 # alias runSubs='/home/piet/personal/productivity/./runSubmodules'
 # runSubs () {
 #     session_name=$(pwd)
