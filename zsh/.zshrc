@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 # export ZSH="/home/dci-student/.oh-my-zsh"
 export ZSH="${HOME}/.oh-my-zsh"
+ZSH_DISABLE_COMPFIX=true
 # export TMUX_TMPDIR="${HOME}/.tmux/tmp"
 
 # Set name of the theme to load --- if set to "random", it will
